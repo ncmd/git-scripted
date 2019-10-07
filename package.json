@@ -58,7 +58,7 @@
     "m3": "git checkout master",
     "//":"MASTER",
     "merge_local________________________//": "Merge Branch locally",
-    "m4": "cross-var \"git merge --no-ff $npm_package_config_currentGitUser-$npm_package_config_branchName\"",,
+    "m4": "cross-var \"git merge --no-ff $npm_package_config_currentGitUser-$npm_package_config_branchName\"",
     "//":"MASTER",
     "rebase_____________________________//": "Rebase, now you need to squash some commits",
     "m5": "git rebase -i origin/master",
