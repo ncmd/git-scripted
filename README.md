@@ -1,24 +1,28 @@
 # git-scripted
 
-# How to contribute to repo
+# How to contribute to a repo
 - Requirements:
   - git
 
-1. Fork this repo
+1. Fork target repo you want to make changes to
 - use github web ui
 
 **NOTE**
 - If you have an existing fork, do not delete it.
 - Instead, update your fork's master branch
 ```
-git remote add upstream https://github.com/ncmd/git-scripted.git
+export GITHUBUSERNAME="your github name"
+export GITREPONAME="git repo name"
+git remote add upstream https://github.com/$GITHUBUSERNAME/$GITREPONAME.git
 git fetch upstream
 git checkout master
 git merge upstream/master
 ```
 
-2. Create Ticket in Trello
+2. Create Ticket/Card in Trello
 - Format ISSUEID-00000X
+- example: Securethebox Trello Board:
+https://trello.com/b/2Qxn34Ok/securethebox
 
 3. Make a new branch before git adding files
 ```
@@ -58,7 +62,8 @@ git push --set-upstream origin $CURRENTGITBRANCH
 9. Open to your github page pull request
 ```
 export GITHUBUSERNAME="your github name"
-open https://github.com/$GITHUBUSERNAME/git-scripted/compare/master...$GITHUBUSERNAME:$CURRENTGITBRANCH?expand=\"
+export GITREPONAME="git repo name"
+open https://github.com/$GITHUBUSERNAME/$GITREPONAME/compare/master...$GITHUBUSERNAME:$CURRENTGITBRANCH?expand=\"
 ```
 
 10. Merge your branch
