@@ -11,7 +11,7 @@
 - If you have an existing fork, do not delete it.
 - Instead, update your fork's master branch
 ```
-git remote add upstream https://github.com/ncmd/git-scripted.giit
+git remote add upstream https://github.com/ncmd/git-scripted.git
 git fetch upstream
 git checkout master
 git merge upstream/master
