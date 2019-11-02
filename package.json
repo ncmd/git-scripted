@@ -18,8 +18,9 @@
   },
   "scripts": {
     "commit-m": "git checkout master && git add --all && git cz && export CURRENTBRANCH=$(git branch | grep \\* | cut -d ' ' -f2) && git push",
-    "commit-b": "git add --all && git cz && export CURRENTBRANCH=$(git branch | grep \\* | cut -d ' ' -f2) && git push --set-upstream origin $CURRENTBRANCH && cross-var \"open https://github.com/ncmd/securethebox-client/compare/master...ncmd:$npm_package_config_b?expand=1\" && npm run sync",
+    "commit-b": "git cz && export CURRENTBRANCH=$(git branch | grep \\* | cut -d ' ' -f2) && git push --set-upstream origin $CURRENTBRANCH && cross-var \"open https://github.com/ncmd/securethebox-client/compare/master...ncmd:$npm_package_config_b?expand=1\" && npm run sync",
     "sync": "git checkout master ; git pull",
+    "reset-clean": "git reset --hard HEAD ; git clean -f -d",
     "fork-new": "run-s f1 f2",
     "fork-commit": "run-s f3",
     "fork-deploy": "run-s f4",
